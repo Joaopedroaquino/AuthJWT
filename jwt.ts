@@ -28,9 +28,9 @@ const signature = crypt
 .update(`${headerEncoded}.${payloadEncoded}`)
 .digest('bin')
 
-const base64Url = require('base64url')
+const base64Url = require('base64-url')
 
-console.log( `${headerEncoded}.${payloadEncoded}.${base64Url(signature)}`);
+console.log( `${headerEncoded}.${payloadEncoded}.${base64Url.encode(signature)}`);
 
 
 // console.log(headerEncoded, payloadEncoded);
