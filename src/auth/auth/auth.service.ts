@@ -24,5 +24,11 @@ const users: {}[] = [
     }
 ];
 
+//1*5
+
 @Injectable()
-export class AuthService { }
+export class AuthService { 
+    login(username, password){
+        console.log(username, password);
+    }
+}
