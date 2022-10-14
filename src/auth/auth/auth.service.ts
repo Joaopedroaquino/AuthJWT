@@ -19,7 +19,7 @@ const users = [
     id: 3,
     username: 'user3@user.com',
     password: '$2b$10$EecWnvyBtN4ttSJWILAjs.lnOfVejB7ABCxWGLS0OUCEcbcnwTu5K',
-    role: 'admin',
+    role: 'user',
   },
 ];
 @Injectable()
