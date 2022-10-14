@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
 
-const users: {}[] = [
+
+const users = [
     {
         id: 1,
         username: 'joaopedro1@user.com',
@@ -30,7 +31,14 @@ const users: {}[] = [
 @Injectable()
 export class AuthService { 
     login(username: string, password: string){
+        const user = this.validateCredentials(username, password);
+
         console.log(username, password);
+    }
+
+    validateCredentials(username: string, password: string){
+     const user = users.find((u) => 
+     u.username === username ); 
     }
 }
 
