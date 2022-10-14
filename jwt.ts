@@ -1,5 +1,8 @@
 import { buffer } from "stream/consumers";
 
+const base64Url = require('base64-url')
+
+
 const header = {
     alg: 'HS256', //PADRAO Hmac + sha256
     typ: 'JWT'
@@ -16,8 +19,8 @@ const payload = {
 
 /// header + payload + key
 
-const headerEncoded = Buffer.from(JSON.stringify(header)).toString('base64');
-const payloadEncoded = Buffer.from(JSON.stringify(payload)).toString('base64');
+const headerEncoded = base64Url.encode(JSON.stringify(header)).toString('base64');
+const payloadEncoded = base64Url.encode(JSON.stringify(payload)).toString('base64');
 
 const key = 'abcd123456';
 
@@ -28,7 +31,6 @@ const signature = crypt
 .update(`${headerEncoded}.${payloadEncoded}`)
 .digest('bin')
 
-const base64Url = require('base64-url')
 
 console.log( `${headerEncoded}.${payloadEncoded}.${base64Url.encode(signature)}`);
 
