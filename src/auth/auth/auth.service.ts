@@ -4,21 +4,21 @@ const users: {}[] = [
     {
         id: 1,
         username: 'joaopedro1@user.com',
-        password: '$2b$10JLmNo.P6q7R8s0.TuVwXyZ',
+        password: '$$2b$10$6CJsBCZ0wzqRnzC1iQ3WUe9hKRDQSFbtTdkZ.1L6cckquNbUwAERu',
 
 
     },
     {
         id: 2,
         username: 'joaopedro2@user.com',
-        password: '$2b$10JLmNo.P6q7R8s0.TuVwXyZ',
+        password: '$$2b$10$6CJsBCZ0wzqRnzC1iQ3WUe9hKRDQSFbtTdkZ.1L6cckquNbUwAERu',
 
 
     },
     {
         id: 3,
         username: 'joaopedro3@user.com',
-        password: '$2b$10JLmNo.P6q7R8s0.TuVwXyZ',
+        password: '$2b$10$6CJsBCZ0wzqRnzC1iQ3WUe9hKRDQSFbtTdkZ.1L6cckquNbUwAERu',
 
 
     }
