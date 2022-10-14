@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import * as bcrypt from 'bcrypt';
 
 const users: {}[] = [
     {
@@ -32,5 +33,6 @@ export class AuthService {
         console.log(username, password);
     }
 }
+
 
 
