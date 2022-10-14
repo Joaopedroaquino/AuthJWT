@@ -29,7 +29,7 @@ const users: {}[] = [
 
 @Injectable()
 export class AuthService { 
-    login(username, password){
+    login(username: string, password: string){
         console.log(username, password);
     }
 }
