@@ -38,7 +38,7 @@ export class AuthService {
 
     validateCredentials(username: string, password: string){
      const user = users.find((u) => 
-     u.username === username ); 
+     u.username === username && bcrypt.compareSync(password, u.password)); 
     }
 }
 
